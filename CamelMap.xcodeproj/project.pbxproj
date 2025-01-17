@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		3707E9A82D3A38960099DCE4 /* NMapsMap in Frameworks */ = {isa = PBXBuildFile; productRef = 3707E9A72D3A38960099DCE4 /* NMapsMap */; };
+		3707E9AF2D3A39AF0099DCE4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3707E9AE2D3A39AF0099DCE4 /* SnapKit */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		3707E98A2D3A37D40099DCE4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -29,9 +34,22 @@
 		3707E9932D3A37D40099DCE4 /* CamelMapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CamelMapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		3707E9AA2D3A38D00099DCE4 /* Exceptions for "CamelMap" folder in "CamelMap" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 3707E9782D3A37D10099DCE4 /* CamelMap */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		3707E97B2D3A37D10099DCE4 /* CamelMap */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				3707E9AA2D3A38D00099DCE4 /* Exceptions for "CamelMap" folder in "CamelMap" target */,
+			);
 			path = CamelMap;
 			sourceTree = "<group>";
 		};
@@ -52,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3707E9A82D3A38960099DCE4 /* NMapsMap in Frameworks */,
+				3707E9AF2D3A39AF0099DCE4 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +132,8 @@
 			);
 			name = CamelMap;
 			packageProductDependencies = (
+				3707E9A72D3A38960099DCE4 /* NMapsMap */,
+				3707E9AE2D3A39AF0099DCE4 /* SnapKit */,
 			);
 			productName = CamelMap;
 			productReference = 3707E9792D3A37D10099DCE4 /* CamelMap.app */;
@@ -195,6 +217,10 @@
 			);
 			mainGroup = 3707E9702D3A37D10099DCE4;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				3707E9A62D3A38960099DCE4 /* XCRemoteSwiftPackageReference "SPM-NMapsMap" */,
+				3707E9AD2D3A39AF0099DCE4 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 3707E97A2D3A37D10099DCE4 /* Products */;
 			projectDirPath = "";
@@ -399,6 +425,7 @@
 				DEVELOPMENT_TEAM = 4FUSK4NWF4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CamelMap/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -428,6 +455,7 @@
 				DEVELOPMENT_TEAM = 4FUSK4NWF4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CamelMap/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -558,6 +586,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3707E9A62D3A38960099DCE4 /* XCRemoteSwiftPackageReference "SPM-NMapsMap" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/navermaps/SPM-NMapsMap";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.20.0;
+			};
+		};
+		3707E9AD2D3A39AF0099DCE4 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3707E9A72D3A38960099DCE4 /* NMapsMap */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3707E9A62D3A38960099DCE4 /* XCRemoteSwiftPackageReference "SPM-NMapsMap" */;
+			productName = NMapsMap;
+		};
+		3707E9AE2D3A39AF0099DCE4 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3707E9AD2D3A39AF0099DCE4 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3707E9712D3A37D10099DCE4 /* Project object */;
 }
