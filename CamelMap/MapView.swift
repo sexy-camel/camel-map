@@ -14,12 +14,23 @@ struct MapView: UIViewRepresentable {
         
         let publicLatLng = NMGLatLng(lat: 37.44442344550767, lng: 127.1440312335699)
         
-        let mapView = NMFMapView(frame: .zero)
+        //let mapView = NMFMapView(frame: .zero)
+        print("ui reloading")
+        
+        let naverMap = NMFNaverMapView(frame: .zero)
+        naverMap.showCompass = true
+        naverMap.showScaleBar = true
+        naverMap.showLocationButton = true
+        naverMap.showZoomControls = true
+        
+        let mapView = naverMap.mapView
+        
         mapView.mapType = .basic
         mapView.latitude = publicLatLng.lat
         mapView.longitude = publicLatLng.lng
         mapView.touchDelegate = context.coordinator
         mapView.zoomLevel = 17
+        //mapView.positionMode = .compass
         
         let marker = NMFMarker()
         marker.position = publicLatLng
@@ -30,7 +41,7 @@ struct MapView: UIViewRepresentable {
             return true
         }
         
-        return mapView
+        return naverMap
     }
     
     func updateUIView(_ uiView: UIView, context: Context) {
